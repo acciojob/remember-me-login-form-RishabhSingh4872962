@@ -18,6 +18,13 @@ function handleSubmit() {
 		existingBtn.hidden=false;
 	}else{
 		existingBtn.hidden=true;
+		
 	}
-	alert("Logged in as");
+	if (!existingBtn.hidden) {
+		alert("Login as existing user");
+	}else{
+		alert("Logged in as");
+	}
+	
+	
 }
