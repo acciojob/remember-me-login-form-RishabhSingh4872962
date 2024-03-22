@@ -9,9 +9,9 @@ function handleClick() {
 		localStorage.setItem("username",username.value)
 		localStorage.setItem("password",password.value);
 		
-	}else if(localStorage.length==2){
-		localStorage.remove("username")
-		localStorage.remove("password");		
+	}else {
+		localStorage.removeItem("username")
+		localStorage.removeItem("password");		
 	}
 	if (localStorage.length==2) {
 		existingBtn.hidden=false;
