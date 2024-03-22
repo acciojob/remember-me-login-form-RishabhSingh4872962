@@ -4,7 +4,8 @@ const password=document.getElementById("password");
 const remember=document.getElementById("checkbox");
 const existingBtn=document.getElementById("existing");
 const btn=document.getElementById("submit");
-function handleClick() {
+function handleSubmit() {
+	this.event.preventDefault();
 	if (remember.checked) {
 		localStorage.setItem("username",username.value)
 		localStorage.setItem("password",password.value);
