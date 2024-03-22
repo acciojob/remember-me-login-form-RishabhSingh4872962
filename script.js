@@ -23,5 +23,5 @@ if (alreadyPassword && alreadyUser) {
 	existingBtn.hidden=true;
 }
 	
-	alert("Logged in as");
+	alert("Logged in as username");
 }
