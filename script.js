@@ -8,23 +8,20 @@ function handleSubmit() {
 	this.event.preventDefault();
 	if (remember.checked) {
 		localStorage.setItem("username",username.value)
-		localStorage.setItem("password",password.value);
-		
+		localStorage.setItem("password",password.value);	
 	}else {
 		localStorage.removeItem("username")
 		localStorage.removeItem("password");		
 	}
-	if (localStorage.length==2) {
-		existingBtn.hidden=false;
-	}else{
-		existingBtn.hidden=true;
-		
-	}
-	if (!existingBtn.hidden) {
-		alert("Login as existing user");
-	}else{
-		alert("Logged in as");
-	}
+	const alreadyUser=localStorage.getItem("username");
+	const alreadyPassword=localStorage.getItem("password");
+	console.log(alreadyPassword,alreadyUser,remember.checked)
+if (alreadyPassword && alreadyUser) {
+	existingBtn.hidden=false;
 	
+}else{
+	existingBtn.hidden=true;
+}
 	
+	alert("Logged in as");
 }
